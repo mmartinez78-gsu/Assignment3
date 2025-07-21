@@ -2,8 +2,20 @@
 <html>
     <head>
         <title>Part A</title>
+        <link href="styles.css" rel="stylesheet">
     </head>
     <body>
-
+        <div class="PartA">
+            <div id="guessing-game">
+                <h3>Number Guessing Game</h3>
+                <p>Guess a number between 1 and 100:</p>
+                <input type="number" id="guess-input" min="1" max="100">
+                <button id="guess-btn" class="btn">Guess</button>
+                <p id="message"></p>
+                <p>Guesses remaining: <span id="guesses-left">10</span></p>
+            </div>
+            <h4><a href="PartB.html">Part B</a></h4>
+        </div>
+        <script src="PartA.js"></script>
     </body>
 </html>

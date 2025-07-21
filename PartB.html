@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Part B</title>
+        <link href="styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="overlay" id="overlay">
+            <div class="overlay-window">
+                <h3>Final Score:</h3>
+                <h1 id="finalScoreMessage"></h1>
+                <p id="prizeMessage">Enter your name:</p>
+                <input type="text" id="playerName">
+                <button id="continue-btn" class="btn">Continue</button>
+            </div>
+        </div>
+        <div id="Setup" class="PartB-Setup">
+            <div id="memory-game-controls">
+                <h3>Memory Game Setup</h3>
+                <div>
+                    <label for="difficulty">Difficulty:</label>
+                    <select id="difficulty">
+                        <option value="8">Easy (8 seconds)</option>
+                        <option value="5">Medium (5 seconds)</option>
+                        <option value="3">Hard (3 seconds)</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="pairs">Number of Pairs:</label>
+                    <select id="pairs">
+                        <option value="8">8 Pairs</option>
+                        <option value="10">10 Pairs</option>
+                        <option value="12">12 Pairs</option>
+                    </select>
+                </div>
+                <button id="start-game" class="btn">Start Game</button>
+            </div>
+            <div class="leaderboard-container">
+                <h3>Leaderboard</h3>
+                <ol id="scores-list">
+                    <li><span>---</span><span>0 Points</span></li>
+                    <li><span>---</span><span>0 Points</span></li>
+                    <li><span>---</span><span>0 Points</span></li>
+                    <li><span>---</span><span>0 Points</span></li>
+                    <li><span>---</span><span>0 Points</span></li>
+                </ol>
+            </div>
+        </div>
+        <div id="Game" class="PartB-Game">
+            <div class="score-container" id="score-container">
+                <div class="score" id="score"></div>
+            </div>
+            <div class="timer" id="timer"></div>
+            <table class="memory-game">
+                <tr>
+                    <td>
+                        <div class="card" id="card1-1">
+                            <div class="card-face card-front"></div>
+                            <div class="card-face card-back"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="card" id="card1-2">
+                            <div class="card-face card-front"></div>
+                            <div class="card-face card-back"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="card" id="card1-3">
+                            <div class="card-face card-front"></div>
+                            <div class="card-face card-back"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="card" id="card1-4">
+                            <div class="card-face card-front"></div>
+                            <div class="card-face card-back"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="card ten-tile" id="card1-5">
+                            <div class="card-face card-front"></div>
+                            <div class="card-face card-back"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="card twelve-tile" id="card1-6">
+                            <div class="card-face card-front"></div>
+                            <div class="card-face card-back"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="card" id="card2-1">
+                            <div class="card-face card-front"></div>
+                            <div class="card-face card-back"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="card" id="card2-2">
+                            <div class="card-face card-front"></div>
+                            <div class="card-face card-back"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="card" id="card2-3">
+                            <div class="card-face card-front"></div>
+                            <div class="card-face card-back"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="card" id="card2-4">
+                            <div class="card-face card-front"></div>
+                            <div class="card-face card-back"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="card ten-tile" id="card2-5">
+                            <div class="card-face card-front"></div>
+                            <div class="card-face card-back"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="card twelve-tile" id="card2-6">
+                            <div class="card-face card-front"></div>
+                            <div class="card-face card-back"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="card" id="card3-1">
+                            <div class="card-face card-front"></div>
+                            <div class="card-face card-back"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="card" id="card3-2">
+                            <div class="card-face card-front"></div>
+                            <div class="card-face card-back"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="card" id="card3-3">
+                            <div class="card-face card-front"></div>
+                            <div class="card-face card-back"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="card" id="card3-4">
+                            <div class="card-face card-front"></div>
+                            <div class="card-face card-back"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="card ten-tile" id="card3-5">
+                            <div class="card-face card-front"></div>
+                            <div class="card-face card-back"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="card twelve-tile" id="card3-6">
+                            <div class="card-face card-front"></div>
+                            <div class="card-face card-back"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="card" id="card4-1">
+                            <div class="card-face card-front"></div>
+                            <div class="card-face card-back"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="card" id="card4-2">
+                            <div class="card-face card-front"></div>
+                            <div class="card-face card-back"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="card" id="card4-3">
+                            <div class="card-face card-front"></div>
+                            <div class="card-face card-back"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="card" id="card4-4">
+                            <div class="card-face card-front"></div>
+                            <div class="card-face card-back"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="card ten-tile" id="card4-5">
+                            <div class="card-face card-front"></div>
+                            <div class="card-face card-back"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="card twelve-tile" id="card4-6">
+                            <div class="card-face card-front"></div>
+                            <div class="card-face card-back"></div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <script src="PartB.js"></script>
+    </body>
+</html>
